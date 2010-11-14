@@ -32,6 +32,7 @@ if (!file_exists(dirname(__FILE__).'/settings.inc.php'))
 	Tools::redirect('install', $dir);
 }
 include(dirname(__FILE__).'/settings.inc.php');
+include(dirname(__FILE__).'/local.settings.inc.php');
 
 /* Redefine REQUEST_URI if empty (on some webservers...) */
 if (!isset($_SERVER['REQUEST_URI']) OR empty($_SERVER['REQUEST_URI']))
